@@ -8,16 +8,16 @@ namespace Задача_8._3
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-            Test test = new Test(@"E:\Sigma Pract\Завдання 8\Задача 8.3\text.txt");
+            Task task = new Task();
 
             Console.WriteLine("Текст зчитаний з файлу:\n");
-            test.PrintText();
+            task.PrintText();
 
-            Console.WriteLine("\nРечення з найбільшою глибиною вкладень дужок:\n" + test.GetHighestParenthesesDepthSentence());
+            task.PrintHighestParenthesesDepthSentence();
 
-            test.sentences.Sort((x, y) => x.Length.CompareTo(y.Length));
+            task.SortSentences();
             Console.WriteLine("\nСписок речень посортованих за довжиною:\n");
-            test.PrintSentences();
+            task.PrintSentences();
 
             Console.ReadKey();
         }
